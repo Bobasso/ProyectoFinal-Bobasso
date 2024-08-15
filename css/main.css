@@ -1,0 +1,10 @@
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 12 \2502      font-family: $font-txt;\d\a    \2502                   ^^^^^^^^^\a    \2575 \a   scss\\_general.scss 12:18  @import\a   scss\\main.scss 4:9        root stylesheet";
+}
