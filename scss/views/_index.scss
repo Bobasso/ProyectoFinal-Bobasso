@@ -23,6 +23,11 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .card:hover {
@@ -31,9 +36,33 @@
 
 .card img {
     border-radius: 5px 5px 0 0;
-    width: 100%;
+    width: 15vw;
 }
 
-.card-container {
-    padding: 2px 16px;
+.card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container h4, p{
+    margin: 5px 0;
+    font-size: 17px;
+    font-family: $font-producto;
+}
+
+.card-container button{
+    width: 6vw;
+    padding: 5px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: 1px solid rgb(151, 151, 151);
+    background-color: rgb(151, 151, 151);
+    border-radius: 10px;
+    transition: border 1s, background-color 1s;
+}
+
+.card-container button:hover{
+    border: 1px solid rgb(194, 194, 194);
+    background-color: rgb(194, 194, 194);
 }
