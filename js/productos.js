@@ -6,9 +6,9 @@ fetch("../data/productos.json")
         data.forEach(element => {
             const div = document.createElement("div");
             div.className = "card"
-
+            div.id = element.id
             div.innerHTML=`
-            <img src="./assets/jordan3-jbalvin.png" alt="Avatar">
+            <img src="${element.src}" alt="Avatar">
             <div class="card-container">
                 <h4><b>"${element.nombre}"</b></h4>
                 <p>Precio: U$D${element.precio}</p>
@@ -16,6 +16,6 @@ fetch("../data/productos.json")
             </div>
             `;
 
-            gridContainer.append(div)
+            gridContainer.appendChild(div)
         });
     })
