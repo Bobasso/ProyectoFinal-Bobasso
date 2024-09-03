@@ -2,6 +2,7 @@ const gridContainer = document.querySelector("#grid-container");
 const listProductos = document.querySelector("#list-productos");
 const verProducto = document.querySelector("#mostrar-producto");
 
+// Mostrar todos los productos en el index
 fetch("../data/productos.json")
     .then((resp) => resp.json())
     .then((data) => {
@@ -20,12 +21,15 @@ fetch("../data/productos.json")
         });
     });
 
+// Pongo un poco de delay para que tome el querySelectorAll y poder así mostrar el producto elegido. Todo esto en una landing page
 setTimeout(()=>{
     const idProducto = document.querySelectorAll("#ver-mas")
     for (let i = 0; i < idProducto.length; i++) {
         const element = idProducto[i];
         element.addEventListener('click', ()=>{
-            fetch("../data/productos.json")
+            // Si no esta logueado, no va a poder ver los productos
+            if(personaLocalStorage !== null){
+                fetch("../data/productos.json")
                 .then((resp) => resp.json())
                 .then((data) => {
                     const div = document.createElement("div");
@@ -46,7 +50,7 @@ setTimeout(()=>{
                                     <p class="talle">42</p>
                                     <p class="talle">43</p>
                                 </div>
-                                <button>Comprar</button>
+                                <button id="btn-comprar">Comprar</button>
                             </div>
                         </div>
                     `
@@ -62,22 +66,50 @@ setTimeout(()=>{
                     verProducto.appendChild(div);
 
                     const talles = document.querySelectorAll(".talle")
-
                     function removerColorFondo(){
                         talles.forEach(item => {
-                            item.classList.remove('cambiarColor');
+                            item.classList.remove('cambiar-color');
                         });
                     };
-
                     talles.forEach(item => {
                         item.addEventListener('click', () => {
                             removerColorFondo();
-                            item.classList.add('cambiarColor');
+                            item.classList.add('cambiar-color');
                         });
                     });
+
+                    const productoAgregar = document.querySelector("#btn-comprar");
+                    productoAgregar.addEventListener('click', ()=>{
+                        const talleElegido = document.querySelector(".cambiar-color")
+                        let producto = {}
+                        producto.id = data[i].id
+                        producto.nombre = data[i].nombre
+                        producto.precio = parseInt(data[i].precio)
+                        producto.talle = talleElegido.innerHTML
+                        
+                        let carrito = localStorage.getItem("carrito")
+                        carrito = JSON.parse(carrito)
+                        carrito.push(producto)
+                        localStorage.setItem('carrito', JSON.stringify(carrito));
+                    });
+
                     listProductos.classList.add("desaparecer");
                     verProducto.classList.remove("desaparecer");
                 });
+            }else{
+                Swal.fire({
+                    icon: "question",
+                    title: "Para poder comprar tenes que registrarte",
+                    showConfirmButton: true,
+                    showDenyButton: true,
+                    confirmButtonText: "Me quiero registrar",
+                    denyButtonText: "Sigo viendo",
+                }).then((result) => {
+                    if(result.isConfirmed){
+                        window.location.href = "../pages/register.html"
+                    }
+                });
+            }
         });
     };
 } ,100);
