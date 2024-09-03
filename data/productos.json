@@ -1,13 +1,13 @@
 [
-    { "id": 1, "nombre": "Adidas Samba", "precio":150, "src": "./assets/adidas-samba.png"},
-    { "id": 2, "nombre": "Jordan 1 Washed Black", "precio":250, "src": "./assets/jordan1-washedblack.png"},
-    { "id": 3, "nombre": "Jordan 3 Jbalvin", "precio":540, "src": "./assets/jordan3-jbalvin.png"},
-    { "id": 4, "nombre": "Jordan 4 Thunder", "precio":75, "src": "./assets/jordan4-thunder.png"},
-    { "id": 5, "nombre": "Nike SB Travis", "precio":125, "src": "./assets/nikesb-travis.webp"},
-    { "id": 6, "nombre": "Jordan 11 Neapolitan", "precio":230, "src": "./assets/jordan11-neapolitan.png"},
-    { "id": 7, "nombre": "New Balance 550 Grey", "precio": 90, "src": "./assets/newbalance550-grey.png"},
-    { "id": 8, "nombre": "Nike Dunk Panda", "precio": 100, "src": "./assets/nikedunk-panda.png"},
-    { "id": 9, "nombre": "Adidas Forum 84 Low Brown", "precio": 360, "src": "./assets/adidasforum-brown.png"},
-    { "id": 10, "nombre": "Nike Dunk Olive", "precio": 55, "src": "./assets/nikedunk-olive.png"}
+    { "id": 0, "nombre": "Adidas Samba", "precio":150, "src": "./assets/adidas-samba.png"},
+    { "id": 1, "nombre": "Jordan 1 Washed Black", "precio":250, "src": "./assets/jordan1-washedblack.png"},
+    { "id": 2, "nombre": "Jordan 3 Jbalvin", "precio":540, "src": "./assets/jordan3-jbalvin.png"},
+    { "id": 3, "nombre": "Jordan 4 Thunder", "precio":75, "src": "./assets/jordan4-thunder.png"},
+    { "id": 4, "nombre": "Nike SB Travis", "precio":125, "src": "./assets/nikesb-travis.webp"},
+    { "id": 5, "nombre": "Jordan 11 Neapolitan", "precio":230, "src": "./assets/jordan11-neapolitan.png"},
+    { "id": 6, "nombre": "New Balance 550 Grey", "precio": 90, "src": "./assets/newbalance550-grey.png"},
+    { "id": 7, "nombre": "Nike Dunk Panda", "precio": 100, "src": "./assets/nikedunk-panda.png"},
+    { "id": 8, "nombre": "Adidas Forum 84 Low Brown", "precio": 360, "src": "./assets/adidasforum-brown.png"},
+    { "id": 9, "nombre": "Nike Dunk Olive", "precio": 55, "src": "./assets/nikedunk-olive.png"}
 ]
 
