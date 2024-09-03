@@ -155,3 +155,27 @@
 .product-details button:hover {
     background-color: #035501;
 }
+
+.talles-zapatillas{
+    display: flex;
+    gap: 20px;
+}
+
+.talle{
+    width: 50px;
+    text-align: center;
+    color: #666;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    transition: background-color 0.5s;
+}
+
+.talles-zapatillas p:hover{
+    background-color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+.cambiarColor{
+    background-color: rgb(168, 168, 168);
+}

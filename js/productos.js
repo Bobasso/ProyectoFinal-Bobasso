@@ -37,7 +37,15 @@ setTimeout(()=>{
                             <div class="product-details">
                                 <h1>${data[i].nombre}</h1>
                                 <p>Precio: U$D${data[i].precio}</p>
-                                <p>Talle: 45arg</p>
+                                <p>Talle</p>
+                                <div class="talles-zapatillas">
+                                    <p class="talle">38</p>
+                                    <p class="talle">39</p>
+                                    <p class="talle">40</p>
+                                    <p class="talle">41</p>
+                                    <p class="talle">42</p>
+                                    <p class="talle">43</p>
+                                </div>
                                 <button>Comprar</button>
                             </div>
                         </div>
@@ -53,6 +61,20 @@ setTimeout(()=>{
                     div.append(btnVolver)
                     verProducto.appendChild(div);
 
+                    const talles = document.querySelectorAll(".talle")
+
+                    function removerColorFondo(){
+                        talles.forEach(item => {
+                            item.classList.remove('cambiarColor');
+                        });
+                    };
+
+                    talles.forEach(item => {
+                        item.addEventListener('click', () => {
+                            removerColorFondo();
+                            item.classList.add('cambiarColor');
+                        });
+                    });
                     listProductos.classList.add("desaparecer");
                     verProducto.classList.remove("desaparecer");
                 });
