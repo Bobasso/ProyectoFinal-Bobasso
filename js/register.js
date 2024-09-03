@@ -38,5 +38,6 @@ function confirmarContraseña(){
         });
         password.value = ""
         copyPassword.value = ""
+        password.focus();
     };
 };

@@ -13,7 +13,6 @@ fetch("../data/productos.json")
             <img src="${element.src}" alt="Avatar">
             <div class="card-container">
                 <h4><b>"${element.nombre}"</b></h4>
-                <p>Precio: U$D${element.precio}</p>
                 <button id="ver-mas" value="${element.id}">Ver más</button>
             </div>
             `;
@@ -38,7 +37,7 @@ setTimeout(()=>{
                             <div class="product-details">
                                 <h1>${data[i].nombre}</h1>
                                 <p>Precio: U$D${data[i].precio}</p>
-                                <p>Talle: 45us</p>
+                                <p>Talle: 45arg</p>
                                 <button>Comprar</button>
                             </div>
                         </div>
