@@ -1,5 +1,7 @@
 // Pido usuario del formulario
 const nombreUser = document.querySelector("#username") // ID user
+const emailUser = document.querySelector("#email") // ID email
+const nombreCompleto = document.querySelector("#fullname") // ID nombre completo
 const formRegister = document.querySelector("#form-register") // ID del formulario del register
 const password = document.querySelector("#password") // ID contraseña
 const copyPassword = document.querySelector("#copy-password") // ID para confirmar la contraseña
@@ -13,6 +15,8 @@ function confirmarContraseña(){
     if(password.value === copyPassword.value){
         let persona = {};
         persona.nombre = (nombreUser.value).trim();
+        persona.email = (emailUser.value);
+        persona.nombreCompleto = (nombreCompleto.value).trim(); 
         localStorage.setItem("persona", JSON.stringify(persona));
         Swal.fire({
             icon: "success",

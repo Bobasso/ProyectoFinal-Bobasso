@@ -326,6 +326,12 @@ ul {
   padding: 0 5rem;
 }
 
+.header-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .header-login button {
   font-size: 15px;
   padding: 5px 10px;
@@ -366,6 +372,12 @@ ul {
 
 .header-shop svg {
   margin: 0 7px;
+  cursor: pointer;
+}
+
+.header-profile {
+  background-color: #f0ebeb;
+  border: #f0ebeb 1px solid;
   cursor: pointer;
 }
 
