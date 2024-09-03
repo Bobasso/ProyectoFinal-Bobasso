@@ -34,5 +34,20 @@ localStorage.setItem("carrito", JSON.stringify(carrito));
 // Mostrar el carrito en el html
 const entrarAlCarrito = document.querySelector(".header-shop")
 entrarAlCarrito.addEventListener('click', ()=>{
-    window.location.href="./pages/carrito.html"
+    if(personaLocalStorage !== null){
+        window.location.href="./pages/carrito.html"
+    }else{
+        Swal.fire({
+            icon: "question",
+            title: "Para poder comprar tenes que registrarte",
+            showConfirmButton: true,
+            showDenyButton: true,
+            confirmButtonText: "Me quiero registrar",
+            denyButtonText: "Sigo viendo",
+        }).then((result) => {
+            if(result.isConfirmed){
+                window.location.href = "../pages/register.html"
+            }
+    });
+}
 });
