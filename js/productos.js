@@ -3,7 +3,7 @@ const listProductos = document.querySelector("#list-productos");
 const verProducto = document.querySelector("#mostrar-producto");
 
 // Mostrar todos los productos en el index
-fetch("../data/productos.json")
+fetch("./data/productos.json")
     .then((resp) => resp.json())
     .then((data) => {
         data.forEach(element => {
@@ -29,7 +29,7 @@ setTimeout(()=>{
         element.addEventListener('click', ()=>{
             // Si no esta logueado, no va a poder ver los productos
             if(personaLocalStorage !== null){
-                fetch("../data/productos.json")
+                fetch("./data/productos.json")
                 .then((resp) => resp.json())
                 .then((data) => {
                     const div = document.createElement("div");
@@ -174,7 +174,7 @@ marcaNewBalance.addEventListener("change", (event)=>{
 });
 
 function filtrarPorMarca(valor){
-    fetch("../data/productos.json")
+    fetch("./data/productos.json")
             .then((resp) => resp.json())
             .then((data) => {
                 gridContainer.innerHTML=""
@@ -200,7 +200,7 @@ function filtrarPorMarca(valor){
                     element.addEventListener('click', ()=>{
                         // Si no esta logueado, no va a poder ver los productos
                         if(personaLocalStorage !== null){
-                            fetch("../data/productos.json")
+                            fetch("./data/productos.json")
                             .then((resp) => resp.json())
                             .then((data) => {
                                 const div = document.createElement("div");
@@ -309,7 +309,7 @@ function filtrarPorMarca(valor){
 };
 
 function sacarFiltrado(){
-    fetch("../data/productos.json")
+    fetch("./data/productos.json")
     .then((resp) => resp.json())
     .then((data) => {
         gridContainer.innerHTML=""
@@ -334,7 +334,7 @@ function sacarFiltrado(){
             element.addEventListener('click', ()=>{
                 // Si no esta logueado, no va a poder ver los productos
                 if(personaLocalStorage !== null){
-                    fetch("../data/productos.json")
+                    fetch("./data/productos.json")
                     .then((resp) => resp.json())
                     .then((data) => {
                         const div = document.createElement("div");
