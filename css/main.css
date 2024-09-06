@@ -45,6 +45,31 @@ ul {
   padding: 0 10px;
 }
 
+.main-izq {
+  margin-bottom: 20px;
+}
+
+.main-izq h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main-izq ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-izq ul li {
+  margin-bottom: 10px;
+}
+
+.main-izq input[type=checkbox] {
+  margin-right: 10px;
+}
+
 .main-der {
   width: 70vw;
   padding: 0 10px;

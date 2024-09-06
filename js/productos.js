@@ -135,3 +135,180 @@ setTimeout(()=>{
         });
     };
 } ,100);
+
+// Filtrar productos
+const marcaNike = document.querySelector("#nike")
+marcaNike.addEventListener("change", (event)=>{
+    if(event.target.checked){
+        fetch("../data/productos.json")
+            .then((resp) => resp.json())
+            .then((data) => {
+                gridContainer.innerHTML=""
+                let filtrado = data.filter(({marca})=> marca === marcaNike.value)
+                filtrado.forEach(element => {
+                    const div = document.createElement("div");
+                    div.className = "card"
+                    div.id = element.id
+                    div.innerHTML=`
+                    <img src="${element.src}" alt="Avatar">
+                    <div class="card-container">
+                        <h4><b>"${element.nombre}"</b></h4>
+                        <button id="ver-mas" value="${element.id}">Ver más</button>
+                    </div>
+                    `;
+                    gridContainer.appendChild(div)
+                });
+            });
+    }else{
+        fetch("../data/productos.json")
+            .then((resp) => resp.json())
+            .then((data) => {
+                gridContainer.innerHTML=""
+                data.forEach(element => {
+                    const div = document.createElement("div");
+                    div.className = "card"
+                    div.id = element.id
+                    div.innerHTML=`
+                    <img src="${element.src}" alt="Avatar">
+                    <div class="card-container">
+                        <h4><b>"${element.nombre}"</b></h4>
+                        <button id="ver-mas" value="${element.id}">Ver más</button>
+                    </div>
+                    `;
+                    gridContainer.appendChild(div)
+                });
+            });
+    }
+});
+
+const marcaAdidas = document.querySelector("#adidas")
+marcaAdidas.addEventListener("change", (event)=>{
+    if(event.target.checked){
+        fetch("../data/productos.json")
+            .then((resp) => resp.json())
+            .then((data) => {
+                gridContainer.innerHTML=""
+                let filtrado = data.filter(({marca})=> marca === marcaAdidas.value)
+                filtrado.forEach(element => {
+                    const div = document.createElement("div");
+                    div.className = "card"
+                    div.id = element.id
+                    div.innerHTML=`
+                    <img src="${element.src}" alt="Avatar">
+                    <div class="card-container">
+                        <h4><b>"${element.nombre}"</b></h4>
+                        <button id="ver-mas" value="${element.id}">Ver más</button>
+                    </div>
+                    `;
+                    gridContainer.appendChild(div)
+                });
+            });
+    }else{
+        fetch("../data/productos.json")
+            .then((resp) => resp.json())
+            .then((data) => {
+                gridContainer.innerHTML=""
+                data.forEach(element => {
+                    const div = document.createElement("div");
+                    div.className = "card"
+                    div.id = element.id
+                    div.innerHTML=`
+                    <img src="${element.src}" alt="Avatar">
+                    <div class="card-container">
+                        <h4><b>"${element.nombre}"</b></h4>
+                        <button id="ver-mas" value="${element.id}">Ver más</button>
+                    </div>
+                    `;
+                    gridContainer.appendChild(div)
+                });
+            });
+    }
+});
+
+const marcaJordan = document.querySelector("#jordan")
+marcaJordan.addEventListener("change", (event)=>{
+    if(event.target.checked){
+        fetch("../data/productos.json")
+            .then((resp) => resp.json())
+            .then((data) => {
+                gridContainer.innerHTML=""
+                let filtrado = data.filter(({marca})=> marca === marcaJordan.value)
+                filtrado.forEach(element => {
+                    const div = document.createElement("div");
+                    div.className = "card"
+                    div.id = element.id
+                    div.innerHTML=`
+                    <img src="${element.src}" alt="Avatar">
+                    <div class="card-container">
+                        <h4><b>"${element.nombre}"</b></h4>
+                        <button id="ver-mas" value="${element.id}">Ver más</button>
+                    </div>
+                    `;
+                    gridContainer.appendChild(div)
+                });
+            });
+    }else{
+        fetch("../data/productos.json")
+            .then((resp) => resp.json())
+            .then((data) => {
+                gridContainer.innerHTML=""
+                data.forEach(element => {
+                    const div = document.createElement("div");
+                    div.className = "card"
+                    div.id = element.id
+                    div.innerHTML=`
+                    <img src="${element.src}" alt="Avatar">
+                    <div class="card-container">
+                        <h4><b>"${element.nombre}"</b></h4>
+                        <button id="ver-mas" value="${element.id}">Ver más</button>
+                    </div>
+                    `;
+                    gridContainer.appendChild(div)
+                });
+            });
+    }
+});
+
+const marcaNewBalance = document.querySelector("#new-balance")
+marcaNewBalance.addEventListener("change", (event)=>{
+    if(event.target.checked){
+        fetch("../data/productos.json")
+            .then((resp) => resp.json())
+            .then((data) => {
+                gridContainer.innerHTML=""
+                let filtrado = data.filter(({marca})=> marca === marcaNewBalance.value)
+                filtrado.forEach(element => {
+                    const div = document.createElement("div");
+                    div.className = "card"
+                    div.id = element.id
+                    div.innerHTML=`
+                    <img src="${element.src}" alt="Avatar">
+                    <div class="card-container">
+                        <h4><b>"${element.nombre}"</b></h4>
+                        <button id="ver-mas" value="${element.id}">Ver más</button>
+                    </div>
+                    `;
+                    gridContainer.appendChild(div)
+                });
+            });
+    }else{
+        fetch("../data/productos.json")
+            .then((resp) => resp.json())
+            .then((data) => {
+                gridContainer.innerHTML=""
+                data.forEach(element => {
+                    const div = document.createElement("div");
+                    div.className = "card"
+                    div.id = element.id
+                    div.innerHTML=`
+                    <img src="${element.src}" alt="Avatar">
+                    <div class="card-container">
+                        <h4><b>"${element.nombre}"</b></h4>
+                        <button id="ver-mas" value="${element.id}">Ver más</button>
+                    </div>
+                    `;
+                    gridContainer.appendChild(div)
+                });
+            });
+    }
+});
