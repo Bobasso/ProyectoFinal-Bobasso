@@ -23,14 +23,14 @@ function formatExpiryDate(input) {
 
 //Mostrar el listado del carrito
 const productosCarrito = document.querySelector(".productos-carrito");
-fetch("ProyectoFinal-Bobasso/data/productos.json")
+fetch("./data/productos.json")
                 .then((resp) => resp.json())
                 .then((data) => {
                     mostrarCarrito(data)
                 });
 
 // Mostrar el precio total del carrito
-fetch("ProyectoFinal-Bobasso/data/productos.json")
+fetch("./data/productos.json")
                 .then((resp) => resp.json())
                 .then((data) => {
                     let carrito = localStorage.getItem("carrito")
