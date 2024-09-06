@@ -50,7 +50,7 @@ setTimeout(()=>{
                                     <p class="talle">42</p>
                                     <p class="talle">43</p>
                                 </div>
-                                <button id="btn-comprar">Comprar</button>
+                                <button id="btn-comprar">Agregar al carrito</button>
                             </div>
                         </div>
                     `
@@ -81,16 +81,38 @@ setTimeout(()=>{
                     const productoAgregar = document.querySelector("#btn-comprar");
                     productoAgregar.addEventListener('click', ()=>{
                         const talleElegido = document.querySelector(".cambiar-color")
-                        let producto = {}
-                        producto.id = data[i].id
-                        producto.nombre = data[i].nombre
-                        producto.precio = parseInt(data[i].precio)
-                        producto.talle = talleElegido.innerHTML
-                        
-                        let carrito = localStorage.getItem("carrito")
-                        carrito = JSON.parse(carrito)
-                        carrito.push(producto)
-                        localStorage.setItem('carrito', JSON.stringify(carrito));
+                        if(talleElegido === null){
+                            Swal.fire({
+                                icon: "error",
+                                title: "Elegí un talle",
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                        }else{
+                            let producto = {}
+                            producto.id = data[i].id
+                            producto.nombre = data[i].nombre
+                            producto.precio = parseInt(data[i].precio)
+                            producto.talle = talleElegido.innerHTML
+                      
+                            let carrito = localStorage.getItem("carrito")
+                            carrito = JSON.parse(carrito)
+                            carrito.push(producto)
+                            localStorage.setItem('carrito', JSON.stringify(carrito));
+                            Toastify({
+                                text: "Producto agregado",
+                                close: false,
+                                duration: 1000,
+                                style:{
+                                    background: "#366B38",
+                                    color: "white",
+                                },
+                                offset:{
+                                    x: 50,
+                                    y: 80
+                                }                  
+                            }).showToast();
+                        }
                     });
 
                     listProductos.classList.add("desaparecer");

@@ -17,6 +17,7 @@ if(personaLocalStorage !== null){
     btn.innerHTML = "Cerrar Sesión"
     btn.addEventListener('click', ()=>{
         localStorage.removeItem("persona");
+        localStorage.removeItem("carrito");
         Swal.fire({
             icon: "success",
             title: "Cerraste sesión con éxito!",
