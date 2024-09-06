@@ -23,14 +23,14 @@ function formatExpiryDate(input) {
 
 //Mostrar el listado del carrito
 const productosCarrito = document.querySelector(".productos-carrito");
-fetch("https://raw.githubusercontent.com/Bobasso/ProyectoFinal-Bobasso/main/data/productos.json")
+fetch("https://raw.githubusercontent.com/Bobasso/JSONproductos/main/productos.json")
                 .then((resp) => resp.json())
                 .then((data) => {
                     mostrarCarrito(data)
                 });
 
 // Mostrar el precio total del carrito
-fetch("https://raw.githubusercontent.com/Bobasso/ProyectoFinal-Bobasso/main/data/productos.json")
+fetch("https://raw.githubusercontent.com/Bobasso/JSONproductos/main/productos.json")
                 .then((resp) => resp.json())
                 .then((data) => {
                     let carrito = localStorage.getItem("carrito")
