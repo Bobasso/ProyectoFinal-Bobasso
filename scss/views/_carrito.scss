@@ -3,11 +3,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 50px;
-}
-
-.info-carrito{
-    flex: 1;
+    gap: 90px;
 }
 
 form{
@@ -15,6 +11,11 @@ form{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-carrito h2{
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .form-group{
@@ -70,14 +71,33 @@ form{
 }
 
 .tabla-producto{
-    display: flex;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
     align-items: center;
-    justify-content: space-around;
+    justify-items: center;
     border-bottom: 1px solid black;
 }
 
 .tabla-producto img{
-    height: 150px;
     width: 180px;
 }
 
+.productos-carrito p{
+    text-align: center;
+}
+
+.productos-carrito a{
+    text-decoration: underline wavy 1px blue;
+    color: blue;
+}
+
+.btn-borrar{
+    width: 2vw;
+}
+
+.monto-total{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 360px;
+}
